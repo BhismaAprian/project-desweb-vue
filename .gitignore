@@ -34,3 +34,5 @@ coverage
 
 # Vitest
 __screenshots__/
+package.json
+package-lock.json
