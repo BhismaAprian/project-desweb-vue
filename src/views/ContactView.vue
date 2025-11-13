@@ -1,17 +1,15 @@
 <script setup>
 import NavbarSection from '@/components/NavbarSection.vue'
 import HeroSection from '@/components/HeroSection.vue'
-import OverviewSection from '@/components/OverviewSection.vue'
+import InfoSection from '@/components/InfoSection.vue'
 import FooterSection from '@/components/FooterSection.vue'
-import ProductSection from '@/components/ProductSection.vue'
 </script>
 
 <template>
   <div class="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth">
     <NavbarSection />
     <HeroSection />
-    <OverviewSection />
-    <ProductSection />
+    <InfoSection />
     <FooterSection />
   </div>
 </template>
