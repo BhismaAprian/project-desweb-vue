@@ -1,63 +1,49 @@
+<script setup>
+import headerImg from '@/assets/head.png'
+</script>
+
 <template>
-  <section class="bg-base-100 lg:grid lg:place-content-center">
+  <section
+    class="relative h-screen w-full bg-cover bg-top flex items-center overflow-hidden"
+    :style="{ backgroundImage: `url(${headerImg})` }"
+  >
     <div
-      class="mx-auto w-screen max-w-7xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32"
-    >
-      <!-- <div class="max-w-prose text-left">
-        <h1 class="text-4xl font-bold  sm:text-5xl">
-          Campus <br></br>Essentials, <br></br>Effortlessly You.
-        </h1>
+      class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/60 via-[#0a0a0a]/20 to-transparent"
+    ></div>
 
-        <p class="mt-4 text-base text-pretty sm:text-lg/relaxed">
-          Timeless pieces for your everyday campus look clean, confident, and made to move with you.
-        </p>
+    <div class="absolute top-6 left-1/2 -translate-x-1/2 z-20"></div>
 
-        <div class="mt-4 flex gap-4 sm:mt-6">
-          <a
-            class="inline-block rounded border border-neutral-600 bg-neutral-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
-            href="#"
-          >
-            For Men
-          </a>
+    <div class="relative z-10 pl-20 w-[45%]">
+      <p class="uppercase text-white/70 tracking-[0.4em] text-[13px] mb-6">Exclusive Brand</p>
 
-          <a
-            class="inline-block rounded border border-gray-200 px-5 py-3 font-medium shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
-            href="#"
-          >
-            For Women
-          </a>
-        </div>
-      </div> -->
+      <h1 class="text-white font-extrabold text-[68px] leading-[1.1] tracking-tight">
+        Campus <br />
+        Essentials, <br />
+        Effortlessly You.
+      </h1>
 
-      <AnimatedContent
-        :distance="100"
-        direction="vertical"
-        :reverse="false"
-        :duration="1"
-        ease="power3.out"
-        :initial-opacity="0"
-        :animate-opacity="true"
-        :scale="1"
-        :threshold="0.1"
-        :delay="2"
-        @complete="handleComplete"
+      <button
+        class="mt-10 px-8 py-3 bg-white rounded-full flex items-center gap-4 text-gray-900 font-semibold shadow-lg hover:bg-gray-200 transition-all duration-300"
       >
-        <div class="your-content">
-          <img
-            src="@/assets/header1.png"
-            alt="Hero Image"
-            class="mt-10 w-full max-w-lg mx-auto md:mt-0 md:max-w-none lg:max-w-lg"
-          />
-        </div>
-      </AnimatedContent>
+        Shop Now
+        <span
+          class="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white text-lg"
+        >
+          →
+        </span>
+      </button>
+    </div>
+
+    <div
+      class="absolute right-20 top-1/2 -translate-y-1/2 text-white/90 w-[280px] text-[25px] leading-relaxed"
+    >
+      Timeless pieces for your everyday campus look clean, confident, and made to move with you.
     </div>
   </section>
 </template>
 
-<script setup>
-import AnimatedContent from './AnimatedContent.vue'
-
-const handleComplete = () => {
-  console.log('Animation completed!')
+<style scoped>
+section {
+  image-rendering: auto;
 }
-</script>
+</style>
