@@ -3,7 +3,7 @@
     <div
       class="mx-auto w-screen max-w-7xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32"
     >
-      <div class="max-w-prose text-left">
+      <!-- <div class="max-w-prose text-left">
         <h1 class="text-4xl font-bold  sm:text-5xl">
           Campus <br></br>Essentials, <br></br>Effortlessly You.
         </h1>
@@ -27,13 +27,37 @@
             For Women
           </a>
         </div>
-      </div>
+      </div> -->
 
-      <img
-        src="@/assets/header.png"
-        alt="Hero Image"
-        class="mt-10 w-full max-w-lg mx-auto md:mt-0 md:max-w-none lg:max-w-lg"
-      />
+      <AnimatedContent
+        :distance="100"
+        direction="vertical"
+        :reverse="false"
+        :duration="1"
+        ease="power3.out"
+        :initial-opacity="0"
+        :animate-opacity="true"
+        :scale="1"
+        :threshold="0.1"
+        :delay="2"
+        @complete="handleComplete"
+      >
+        <div class="your-content">
+          <img
+            src="@/assets/header1.png"
+            alt="Hero Image"
+            class="mt-10 w-full max-w-lg mx-auto md:mt-0 md:max-w-none lg:max-w-lg"
+          />
+        </div>
+      </AnimatedContent>
     </div>
   </section>
 </template>
+
+<script setup>
+import AnimatedContent from './AnimatedContent.vue'
+
+const handleComplete = () => {
+  console.log('Animation completed!')
+}
+</script>
