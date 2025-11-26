@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { onMounted } from 'vue'
 
-// Ensure app starts in light mode by default, or restore stored preference
 const DEFAULT_THEME = 'light'
 onMounted(() => {
   try {
@@ -10,7 +9,6 @@ onMounted(() => {
     const theme = stored || DEFAULT_THEME
     document.documentElement.setAttribute('data-theme', theme)
   } catch (e) {
-    // If localStorage is not available, still set default
     document.documentElement.setAttribute('data-theme', DEFAULT_THEME)
   }
 })
