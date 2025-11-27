@@ -47,7 +47,7 @@ onMounted(() => {
       <!-- TITLE -->
       <h1
         ref="animatedTitle"
-        class="hero-animate opacity-0 text-white font-extrabold text-[68px] leading-[1.1] tracking-tight"
+        class="hero-animate opacity-0 text-white font-extrabold text-[48px] leading-[1.1] tracking-tight"
       >
         Campus <br />
         Essentials, <br />
