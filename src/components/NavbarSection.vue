@@ -8,7 +8,6 @@ const scrolled = ref(false)
 onMounted(() => {
   theme.value = document.documentElement.getAttribute('data-theme') || 'light'
 
-  // Detect scroll → ubah style navbar
   window.addEventListener('scroll', () => {
     scrolled.value = window.scrollY > 20
   })
@@ -31,19 +30,15 @@ function toggleTheme() {
     ]"
   >
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
-      <!-- Left: Brand -->
       <RouterLink to="/" class="text-2xl font-bold tracking-wide text-white"> ITK WEAR </RouterLink>
 
-      <!-- Desktop Menu -->
       <div class="hidden md:flex items-center gap-8 text-white font-medium">
         <RouterLink to="/" class="hover:text-gray-300 transition">Home</RouterLink>
         <RouterLink to="/contact" class="hover:text-gray-300 transition">Contacts</RouterLink>
         <RouterLink to="/about" class="hover:text-gray-300 transition">About</RouterLink>
       </div>
 
-      <!-- Right icons -->
       <div class="flex items-center gap-3 text-white">
-        <!-- Theme toggle -->
         <button class="btn btn-ghost btn-circle" @click="toggleTheme">
           <template v-if="theme === 'light'">
             <svg
