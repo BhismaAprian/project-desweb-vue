@@ -1,9 +1,10 @@
 <script setup>
 import NavbarSection from '@/components/NavbarSection.vue'
-import HeroSection from '@/components/HeroSection.vue'
-import OverviewSection from '@/components/OverviewSection.vue'
+import HeroCarousel from '@/components/HeroCarousel.vue'
+import CategoryGrid from '@/components/CategoryGrid.vue'
+import ProductHorizontalScroll from '@/components/ProductHorizontalScroll.vue'
+import About from '@/components/About.vue'
 import FooterSection from '@/components/FooterSection.vue'
-import ProductSection from '@/components/ProductSection.vue'
 
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Mousewheel } from 'swiper/modules'
@@ -12,7 +13,7 @@ import 'swiper/css'
 </script>
 
 <template>
-  <div class="relative h-screen w-full overflow-hidden">
+  <div class="relative w-full overflow-x-hidden">
     <NavbarSection class="fixed top-0 left-0 w-full z-50" />
 
     <Swiper
@@ -22,15 +23,19 @@ import 'swiper/css'
       class="h-screen w-full"
     >
       <SwiperSlide>
-        <HeroSection />
+        <HeroCarousel />
       </SwiperSlide>
 
       <SwiperSlide>
-        <OverviewSection />
+        <CategoryGrid />
       </SwiperSlide>
 
       <SwiperSlide>
-        <ProductSection />
+        <ProductHorizontalScroll />
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <About />
       </SwiperSlide>
 
       <SwiperSlide>
