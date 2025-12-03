@@ -54,7 +54,6 @@ onMounted(() => {
         Effortlessly You.
       </h1>
 
-      <!-- BUTTON -->
       <button
         class="reveal opacity-0 mt-10 px-8 py-3 bg-white rounded-full flex items-center gap-4 text-gray-900 font-semibold shadow-lg hover:bg-gray-200"
       >
