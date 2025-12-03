@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
 
 defineProps({
   product: {
@@ -12,14 +13,14 @@ const isFocused = ref(false)
 </script>
 
 <template>
-  <article
+  <RouterLink
+    :to="`/product/${product.id}`"
     @mouseenter="isFocused = true"
     @mouseleave="isFocused = false"
     @focus="isFocused = true"
     @blur="isFocused = false"
-    tabindex="0"
     :class="[
-      'group cursor-pointer transition-all duration-300 outline-none',
+      'group block cursor-pointer transition-all duration-300 outline-none',
       isFocused ? 'ring-4 ring-[#004080]' : '',
     ]"
   >
@@ -36,5 +37,5 @@ const isFocused = ref(false)
       <h3 class="text-sm font-semibold text-[#1a1a1a] mb-1 tracking-wide">{{ product.name }}</h3>
       <p class="text-sm font-bold text-[#1a1a1a]">{{ product.price }}</p>
     </div>
-  </article>
+  </RouterLink>
 </template>
