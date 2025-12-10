@@ -1,21 +1,15 @@
 <script setup>
 import { ref } from 'vue'
 import { Search } from 'lucide-vue-next'
+import categoriesData from '@/data/categories.json'
 
 const searchQuery = ref('')
-
-const categories = [
-  { name: 'NEW', active: true },
-  { name: 'BEST SELLERS', active: false },
-  { name: 'SHIRTS', active: false },
-  { name: 'T-SHIRTS', active: false },
-  { name: 'POLO SHIRTS', active: false },
-  { name: 'UNIFORM', active: false },
-  { name: 'SHORTS', active: false },
-  { name: 'JACKETS', active: false },
-]
-
-const activeCategories = ref(categories)
+const activeCategories = ref(
+  categoriesData.searchTabs.map((tab) => ({
+    name: tab.name,
+    active: tab.defaultActive,
+  })),
+)
 
 const toggleCategory = (index) => {
   activeCategories.value[index].active = !activeCategories.value[index].active

@@ -1,26 +1,12 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import headerImg from '@/assets/head.png'
-import header1Img from '@/assets/header1.png'
+import slidesData from '@/data/slides.json'
+import { assetUrl } from '@/utils/assetUrl'
 
-const slides = [
-  {
-    id: 1,
-    image: headerImg,
-    subtitle: 'NEW COLLECTION',
-    title: 'CAMPUS ESSENTIALS',
-    titleLine2: 'EFFORTLESSLY YOU',
-    cta: 'Shop Now',
-  },
-  {
-    id: 2,
-    image: header1Img,
-    subtitle: 'HIMPUNAN SERIES',
-    title: 'REPRESENT YOUR',
-    titleLine2: 'FACULTY PRIDE',
-    cta: 'Explore',
-  },
-]
+const slides = slidesData.map((slide) => ({
+  ...slide,
+  image: assetUrl(slide.image),
+}))
 
 const currentSlide = ref(0)
 const isTransitioning = ref(false)
@@ -72,14 +58,12 @@ onUnmounted(() => {
     @mouseenter="stopAutoplay"
     @mouseleave="startAutoplay"
   >
-    <!-- Slides with Wipe Transition -->
     <div
       v-for="(slide, index) in slides"
       :key="slide.id"
       class="absolute inset-0"
       :class="currentSlide === index ? 'z-20' : 'z-10'"
     >
-      <!-- Smooth wipe transition using clip-path -->
       <div
         class="absolute inset-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.77,0,0.175,1)]"
         :style="{
@@ -101,12 +85,10 @@ onUnmounted(() => {
           }"
         ></div>
 
-        <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
     </div>
 
-    <!-- Massive layered typography content -->
     <div class="relative z-30 h-full flex items-center">
       <div class="max-w-[90rem] mx-auto px-8 md:px-20 w-full">
         <div
@@ -115,7 +97,6 @@ onUnmounted(() => {
           class="absolute inset-x-8 md:inset-x-20"
           :class="currentSlide === index ? 'pointer-events-auto' : 'pointer-events-none'"
         >
-          <!-- Subtitle -->
           <p
             class="text-white/70 uppercase tracking-[0.5em] text-[10px] md:text-xs mb-6 transition-all duration-700 delay-300"
             :class="
@@ -125,7 +106,6 @@ onUnmounted(() => {
             {{ slide.subtitle }}
           </p>
 
-          <!-- Massive editorial typography -->
           <h1
             class="text-white text-[3rem] md:text-[6rem] lg:text-[8rem] font-extralight leading-[0.9] tracking-wider uppercase transition-all duration-700 delay-400"
             :class="
@@ -143,7 +123,6 @@ onUnmounted(() => {
             {{ slide.titleLine2 }}
           </h1>
 
-          <!-- CTA Button with transparent hover -->
           <button
             class="mt-12 md:mt-16 px-10 py-4 bg-transparent text-white font-light tracking-[0.3em] text-xs uppercase transition-all duration-500 delay-600 border-2 border-white/80 hover:bg-white hover:text-black"
             :class="
@@ -156,7 +135,6 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <!-- Slide Indicators -->
     <div class="absolute bottom-16 left-8 md:left-20 z-40 flex items-center gap-4">
       <button
         v-for="(slide, index) in slides"
@@ -173,7 +151,6 @@ onUnmounted(() => {
       </button>
     </div>
 
-    <!-- Slide Counter -->
     <div
       class="absolute bottom-16 right-8 md:right-20 z-40 text-white/50 text-xs tracking-[0.3em] font-light"
     >
@@ -182,7 +159,6 @@ onUnmounted(() => {
       <span>{{ String(slides.length).padStart(2, '0') }}</span>
     </div>
 
-    <!-- Scroll Indicator -->
     <div class="absolute bottom-16 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-3">
       <span class="text-white/40 text-[10px] tracking-[0.3em] uppercase">Scroll</span>
       <div class="w-px h-12 bg-white/20 relative overflow-hidden">

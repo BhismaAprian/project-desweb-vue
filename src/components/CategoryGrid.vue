@@ -1,32 +1,12 @@
 <script setup>
 import { ref } from 'vue'
-import img1 from '@/assets/1.png'
-import img2 from '@/assets/2.png'
-import img3 from '@/assets/3.png'
+import categoriesData from '@/data/categories.json'
+import { assetUrl } from '@/utils/assetUrl'
 
-const categories = [
-  {
-    id: 1,
-    title: 'WORKSHIRTS',
-    subtitle: 'Formal Campus Wear',
-    image: img1,
-    link: '/category/workshirts',
-  },
-  {
-    id: 2,
-    title: 'HIMPUNAN JACKETS',
-    subtitle: 'Faculty Pride Collection',
-    image: img2,
-    link: '/category/jackets',
-  },
-  {
-    id: 3,
-    title: 'CASUAL T-SHIRTS',
-    subtitle: 'Everyday Essentials',
-    image: img3,
-    link: '/category/tshirts',
-  },
-]
+const categories = categoriesData.collections.map((category) => ({
+  ...category,
+  image: assetUrl(category.image),
+}))
 
 const hoveredIndex = ref(null)
 
@@ -71,9 +51,7 @@ function exploreTransitionClass(index) {
         </h2>
       </div>
 
-      <!-- Grid: 1 column on small, 3 on md+; each card keeps 4:5 aspect -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-        <!-- Card -->
         <a
           v-for="(category, index) in categories"
           :key="category.id"
@@ -83,7 +61,6 @@ function exploreTransitionClass(index) {
           @mouseenter="setHover(index)"
           @mouseleave="clearHover"
         >
-          <!-- Image (covers card) -->
           <div class="absolute inset-0 overflow-hidden">
             <img
               :src="category.image"
@@ -93,12 +70,10 @@ function exploreTransitionClass(index) {
             />
           </div>
 
-          <!-- Gradient overlay to improve text contrast -->
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
           ></div>
 
-          <!-- Bottom content: subtitle, title, CTA -->
           <div class="absolute inset-x-0 bottom-0 p-8 md:p-10">
             <p
               class="text-white/60 uppercase tracking-[0.3em] text-[10px] mb-3 transition-all duration-500"

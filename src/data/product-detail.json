@@ -1,0 +1,57 @@
+{
+  "product": {
+    "id": 1,
+    "name": "INFORCE T-SHIRT",
+    "price": "RP. 50.000",
+    "description": "Relaxed-fit shirt. Camp collar and short sleeves. Button-up front.",
+    "taxNote": "MRP incl. of all taxes",
+    "availability": "In Stock",
+    "images": ["1.png", "1.png", "1.png"],
+    "colors": [
+      { "name": "Light Gray", "hex": "#D1D5DB" },
+      { "name": "Gray", "hex": "#9CA3AF" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Lavender", "hex": "#C7D2FE" }
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL", "2X"],
+    "specifications": [
+      { "label": "Material", "value": "100% Cotton" },
+      { "label": "Fit", "value": "Relaxed" },
+      { "label": "Neckline", "value": "Crew Neck" },
+      { "label": "Sleeve Length", "value": "Short Sleeve" },
+      { "label": "Care", "value": "Machine Wash Cold" },
+      { "label": "Origin", "value": "Made in Indonesia" }
+    ]
+  },
+  "relatedProducts": [
+    {
+      "id": 2,
+      "name": "INFORCE Slim Fit T-Shirt",
+      "category": "Cotton T Shirt",
+      "price": "RP. 50.000",
+      "image": "1.png"
+    },
+    {
+      "id": 3,
+      "name": "INFORCE Weight T-Shirt",
+      "category": "Cotton T Shirt",
+      "price": "RP. 50.000",
+      "image": "1.png"
+    },
+    {
+      "id": 4,
+      "name": "INFORCE Classic Tee",
+      "category": "Cotton T Shirt",
+      "price": "RP. 45.000",
+      "image": "1.png"
+    },
+    {
+      "id": 5,
+      "name": "INFORCE Premium Tee",
+      "category": "Cotton T Shirt",
+      "price": "RP. 65.000",
+      "image": "1.png"
+    }
+  ]
+}

@@ -2,30 +2,14 @@
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import img from '@/assets/1.png'
-import img2 from '@/assets/2.png'
+import productsData from '@/data/products.json'
+import { assetUrl } from '@/utils/assetUrl'
 gsap.registerPlugin(ScrollTrigger)
 
-const products = [
-  {
-    id: 1,
-    name: 'KAOS INFORCE',
-    price: 'Rp 249.000',
-    img: img,
-  },
-  {
-    id: 2,
-    name: 'KAOS INFORCE',
-    price: 'Rp 329.000',
-    img: img2,
-  },
-  {
-    id: 3,
-    name: 'KAOS INFORCE',
-    price: 'Rp 499.000',
-    img: img2,
-  },
-]
+const products = productsData.spotlight.map((product) => ({
+  ...product,
+  img: assetUrl(product.image),
+}))
 
 const cards = ref([])
 

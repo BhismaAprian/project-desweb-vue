@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import NavbarSection from '@/components/NavbarSection.vue'
-import FooterSection from '@/components/FooterSection.vue'
+import NavbarSection from '@/sections/NavbarSection.vue'
+import FooterSection from '@/sections/FooterSection.vue'
 import FilterSidebar from '@/components/FilterSidebar.vue'
 import ProductSearchHeader from '@/components/ProductSearchHeader.vue'
 import ProductGrid from '@/components/ProductGrid.vue'

@@ -1,0 +1,18 @@
+{
+  "tabs": [
+    { "id": "toko", "label": "Toko", "icon": "store" },
+    { "id": "faq", "label": "FAQ", "icon": "chat" }
+  ],
+  "trending": [
+    "Celana Barrel",
+    "Koleksi Jeans",
+    "Koleksi Flannel",
+    "Winter Travel",
+    "Kaos Kaki HEATT...",
+    "Limited Offer",
+    "Sale"
+  ],
+  "placeholder": "Masukkan kata kunci",
+  "historyTitle": "Riwayat pencarian",
+  "historyEmpty": "Anda dapat melihat riwayat pencarian Anda di sini."
+}

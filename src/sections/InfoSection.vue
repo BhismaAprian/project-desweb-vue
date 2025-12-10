@@ -4,10 +4,8 @@ import { ref, onMounted } from 'vue'
 const mapSrc = ref('')
 
 function genRandom() {
-  // random lat -90..90, lng -180..180
   const lat = (Math.random() * 180 - 90).toFixed(5)
   const lng = (Math.random() * 360 - 180).toFixed(5)
-  // Use Google Maps embed query; output=embed works without API key for simple point views
   mapSrc.value = `https://www.google.com/maps?q=${lat},${lng}&z=13&output=embed`
 }
 
@@ -18,7 +16,6 @@ onMounted(() => {
 
 <template>
   <section class="bg-base-100 lg:grid lg:place-content-center">
-    <!-- Intro text -->
     <header class="text-center mb-8">
       <h2 class="text-2xl sm:text-3xl font-bold">Contact With Us!</h2>
       <p class="mt-3 text-sm sm:text-base text-base-content/70 max-w-3xl mx-auto">

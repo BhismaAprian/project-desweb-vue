@@ -1,0 +1,45 @@
+{
+  "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+  "sections": [
+    {
+      "name": "Category",
+      "type": "checkbox",
+      "open": false,
+      "options": [
+        { "id": "tshirt", "label": "T-Shirt", "count": 24 },
+        { "id": "hoodie", "label": "Hoodie", "count": 12 },
+        { "id": "jacket", "label": "Jacket", "count": 8 },
+        { "id": "pants", "label": "Pants", "count": 15 },
+        { "id": "shorts", "label": "Shorts", "count": 6 },
+        { "id": "accessories", "label": "Accessories", "count": 10 }
+      ]
+    },
+    {
+      "name": "Colors",
+      "type": "color",
+      "open": false,
+      "options": [
+        { "id": "black", "label": "Black", "hex": "#000000" },
+        { "id": "white", "label": "White", "hex": "#FFFFFF" },
+        { "id": "navy", "label": "Navy", "hex": "#1a365d" },
+        { "id": "gray", "label": "Gray", "hex": "#6B7280" },
+        { "id": "red", "label": "Red", "hex": "#DC2626" },
+        { "id": "green", "label": "Green", "hex": "#16A34A" },
+        { "id": "yellow", "label": "Yellow", "hex": "#EAB308" },
+        { "id": "blue", "label": "Blue", "hex": "#2563EB" }
+      ]
+    },
+    {
+      "name": "Price Range",
+      "type": "price",
+      "open": false,
+      "options": [
+        { "id": "under50", "label": "Under Rp 50.000", "min": 0, "max": 50000 },
+        { "id": "50to100", "label": "Rp 50.000 - Rp 100.000", "min": 50000, "max": 100000 },
+        { "id": "100to200", "label": "Rp 100.000 - Rp 200.000", "min": 100000, "max": 200000 },
+        { "id": "200to500", "label": "Rp 200.000 - Rp 500.000", "min": 200000, "max": 500000 },
+        { "id": "over500", "label": "Over Rp 500.000", "min": 500000, "max": null }
+      ]
+    }
+  ]
+}

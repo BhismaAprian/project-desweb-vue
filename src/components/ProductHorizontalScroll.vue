@@ -1,17 +1,12 @@
 <script setup>
 import { ref } from 'vue'
-import img1 from '@/assets/1.png'
-import img2 from '@/assets/2.png'
-import img3 from '@/assets/3.png'
+import productsData from '@/data/products.json'
+import { assetUrl } from '@/utils/assetUrl'
 
-const products = [
-  { id: 1, name: 'Classic Workshirt', price: 'Rp 249.000', image: img1 },
-  { id: 2, name: 'Himpunan Jacket TI', price: 'Rp 399.000', image: img2 },
-  { id: 3, name: 'Campus Tee Black', price: 'Rp 149.000', image: img3 },
-  { id: 4, name: 'Formal White Shirt', price: 'Rp 279.000', image: img1 },
-  { id: 5, name: 'Varsity Jacket', price: 'Rp 449.000', image: img2 },
-  { id: 6, name: 'ITK Logo Tee', price: 'Rp 129.000', image: img3 },
-]
+const products = productsData.bestsellers.map((product) => ({
+  ...product,
+  image: assetUrl(product.image),
+}))
 
 const scrollContainer = ref(null)
 const hoveredProduct = ref(null)
@@ -29,7 +24,6 @@ const scroll = (direction) => {
 <template>
   <section class="py-32 bg-[#F3F4F6]">
     <div class="max-w-[90rem] mx-auto px-4 md:px-8">
-      <!-- Section Header -->
       <div class="flex items-end justify-between mb-16">
         <div>
           <p class="text-[#004080]/50 uppercase tracking-[0.4em] text-[10px] mb-4">Featured</p>
@@ -40,7 +34,6 @@ const scroll = (direction) => {
           </h2>
         </div>
 
-        <!-- Navigation Arrows -->
         <div class="hidden md:flex items-center gap-2">
           <button
             @click="scroll('left')"
@@ -84,7 +77,6 @@ const scroll = (direction) => {
       </div>
     </div>
 
-    <!-- Horizontal Scroll Container -->
     <div
       ref="scrollContainer"
       class="flex gap-4 overflow-x-auto scrollbar-hide px-4 md:px-8 pb-4"

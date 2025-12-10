@@ -1,0 +1,74 @@
+{
+  "grid": [
+    {
+      "id": 101,
+      "category": "Cotton T Shirt",
+      "name": "INFORCE Slim Fit T-Shirt",
+      "price": "Rp 149.000",
+      "image": "1.png"
+    },
+    {
+      "id": 102,
+      "category": "Cotton T Shirt",
+      "name": "INFORCE Weight T-Shirt",
+      "price": "Rp 159.000",
+      "image": "2.png"
+    },
+    {
+      "id": 103,
+      "category": "Cotton T Shirt",
+      "name": "INFORCE Classic Tee",
+      "price": "Rp 139.000",
+      "image": "2.png"
+    },
+    {
+      "id": 104,
+      "category": "Cotton T Shirt",
+      "name": "INFORCE Everyday Tee",
+      "price": "Rp 129.000",
+      "image": "1.png"
+    },
+    {
+      "id": 105,
+      "category": "Cotton T Shirt",
+      "name": "INFORCE Oversized Tee",
+      "price": "Rp 169.000",
+      "image": "2.png"
+    },
+    {
+      "id": 106,
+      "category": "Cotton T Shirt",
+      "name": "INFORCE Textured Tee",
+      "price": "Rp 179.000",
+      "image": "1.png"
+    }
+  ],
+  "spotlight": [
+    {
+      "id": 201,
+      "name": "KAOS INFORCE Midnight",
+      "price": "Rp 249.000",
+      "image": "1.png"
+    },
+    {
+      "id": 202,
+      "name": "KAOS INFORCE Heritage",
+      "price": "Rp 329.000",
+      "image": "2.png"
+    },
+    {
+      "id": 203,
+      "name": "KAOS INFORCE Atelier",
+      "price": "Rp 499.000",
+      "image": "2.png"
+    }
+  ],
+  "bestsellers": [
+    { "id": 301, "name": "Classic Workshirt", "price": "Rp 249.000", "image": "1.png" },
+    { "id": 302, "name": "Himpunan Jacket TI", "price": "Rp 399.000", "image": "2.png" },
+    { "id": 303, "name": "Campus Tee Black", "price": "Rp 149.000", "image": "3.png" },
+    { "id": 304, "name": "Formal White Shirt", "price": "Rp 279.000", "image": "1.png" },
+    { "id": 305, "name": "Varsity Jacket", "price": "Rp 449.000", "image": "2.png" },
+    { "id": 306, "name": "ITK Logo Tee", "price": "Rp 129.000", "image": "3.png" }
+  ]
+}
