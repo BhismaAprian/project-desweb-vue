@@ -1,79 +1,37 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import ProductImageGallery from '@/components/ProductImageGallery.vue'
-import ColorSelector from '@/components/ColorSelector.vue'
+import ColorSelector from '@/components/ui/ColorSelector.vue'
 import SizeSelector from '@/components/SizeSelector.vue'
-// import ProductSpecifications from '@/components/ProductSpecifications.vue'
 import RelatedProducts from '@/components/RelatedProducts.vue'
-import FooterSection from '@/components/FooterSection.vue'
-import img1 from '@/assets/1.png'
-import NavbarSection from '@/components/NavbarSection.vue'
+import FooterSection from '@/sections/FooterSection.vue'
+import NavbarSection from '@/sections/NavbarSection.vue'
 
-const product = ref({
-  id: 1,
-  name: 'INFORCE T-SHIRT',
-  price: 'RP. 50.000',
-  description: 'Relaxed-fit shirt. Camp collar and short sleeves. Button-up front.',
-  taxNote: 'MRP incl. of all taxes',
-  availability: 'In Stock',
-  images: [img1, img1, img1],
-  colors: [
-    { name: 'Light Gray', hex: '#D1D5DB' },
-    { name: 'Gray', hex: '#9CA3AF' },
-    { name: 'Black', hex: '#1a1a1a' },
-    { name: 'White', hex: '#FFFFFF' },
-    { name: 'Lavender', hex: '#C7D2FE' },
-  ],
-  sizes: ['XS', 'S', 'M', 'L', 'XL', '2X'],
-  specifications: [
-    { label: 'Material', value: '100% Cotton' },
-    { label: 'Fit', value: 'Relaxed' },
-    { label: 'Neckline', value: 'Crew Neck' },
-    { label: 'Sleeve Length', value: 'Short Sleeve' },
-    { label: 'Care', value: 'Machine Wash Cold' },
-    { label: 'Origin', value: 'Made in Indonesia' },
-  ],
-})
+import productData from '@/data/product-detail.json'
+import { assetUrl } from '@/utils/assetUrl'
+
+const product = computed(() => ({
+  ...productData.product,
+  images: productData.product.images.map((img) => assetUrl(img)),
+}))
+
+const relatedProducts = computed(() =>
+  productData.relatedProducts.map((item) => ({
+    ...item,
+    image: assetUrl(item.image),
+  })),
+)
 
 const selectedColor = ref('Black')
-const selectedSize = ref('')
 
-const relatedProducts = ref([
-  {
-    id: 2,
-    name: 'INFORCE Slim Fit T-Shirt',
-    category: 'Cotton T Shirt',
-    price: 'RP. 50.000',
-    image: img1,
-  },
-  {
-    id: 3,
-    name: 'INFORCE Weight T-Shirt',
-    category: 'Cotton T Shirt',
-    price: 'RP. 50.000',
-    image: img1,
-  },
-  {
-    id: 4,
-    name: 'INFORCE Classic Tee',
-    category: 'Cotton T Shirt',
-    price: 'RP. 45.000',
-    image: img1,
-  },
-  {
-    id: 5,
-    name: 'INFORCE Premium Tee',
-    category: 'Cotton T Shirt',
-    price: 'RP. 65.000',
-    image: img1,
-  },
-])
+const selectedSize = ref('')
 
 const addToCart = () => {
   if (!selectedSize.value) {
     alert('Please select a size')
     return
   }
+
   console.log('Added to cart:', {
     product: product.value.name,
     color: selectedColor.value,
@@ -88,7 +46,6 @@ const addToCart = () => {
 
     <main class="pt-24 pb-16">
       <div class="max-w-7xl mx-auto px-6">
-        <!-- Breadcrumb -->
         <nav class="text-sm text-gray-500 mb-8">
           <RouterLink to="/" class="hover:text-[#004080]">Home</RouterLink>
           <span class="mx-2">/</span>
@@ -133,7 +90,9 @@ const addToCart = () => {
 
               <div class="flex items-center gap-2 mb-6">
                 <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                <span class="text-sm text-green-600 font-medium">{{ product.availability }}</span>
+                <span class="text-sm text-green-600 font-medium">
+                  {{ product.availability }}
+                </span>
               </div>
 
               <div class="mb-6">
@@ -145,13 +104,11 @@ const addToCart = () => {
               </div>
 
               <button
-                @click="addToCart"
+                @click="$router.push('/checkout')"
                 class="w-full py-4 bg-[#1a1a1a] text-white text-sm font-bold tracking-widest hover:bg-[#004080] transition-colors duration-300"
               >
                 ADD
               </button>
-
-              <div class="mt-8"></div>
             </div>
           </div>
         </div>

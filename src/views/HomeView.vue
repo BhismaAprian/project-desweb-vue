@@ -1,10 +1,10 @@
 <script setup>
-import NavbarSection from '@/components/NavbarSection.vue'
+import NavbarSection from '@/sections/NavbarSection.vue'
 import HeroCarousel from '@/components/HeroCarousel.vue'
 import CategoryGrid from '@/components/CategoryGrid.vue'
 import ProductHorizontalScroll from '@/components/ProductHorizontalScroll.vue'
-import About from '@/components/About.vue'
-import FooterSection from '@/components/FooterSection.vue'
+import About from '@/sections/AboutSection.vue'
+import FooterSection from '@/sections/FooterSection.vue'
 
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Mousewheel } from 'swiper/modules'
