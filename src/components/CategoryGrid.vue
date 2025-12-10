@@ -1,32 +1,12 @@
 <script setup>
 import { ref } from 'vue'
-import img1 from '@/assets/1.png'
-import img2 from '@/assets/2.png'
-import img3 from '@/assets/3.png'
+import categoriesData from '@/data/categories.json'
+import { assetUrl } from '@/utils/assetUrl'
 
-const categories = [
-  {
-    id: 1,
-    title: 'WORKSHIRTS',
-    subtitle: 'Formal Campus Wear',
-    image: img1,
-    link: '/products',
-  },
-  {
-    id: 2,
-    title: 'HIMPUNAN JACKETS',
-    subtitle: 'Faculty Pride Collection',
-    image: img2,
-    link: '/products',
-  },
-  {
-    id: 3,
-    title: 'CASUAL T-SHIRTS',
-    subtitle: 'Everyday Essentials',
-    image: img3,
-    link: '/products',
-  },
-]
+const categories = categoriesData.collections.map((category) => ({
+  ...category,
+  image: assetUrl(category.image),
+}))
 
 const hoveredIndex = ref(null)
 
