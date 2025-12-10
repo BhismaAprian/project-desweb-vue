@@ -1,0 +1,35 @@
+{
+  "searchTabs": [
+    { "name": "NEW", "label": "New Arrivals", "defaultActive": true },
+    { "name": "BEST SELLERS", "label": "Best Sellers", "defaultActive": false },
+    { "name": "SHIRTS", "label": "Shirts", "defaultActive": false },
+    { "name": "T-SHIRTS", "label": "T-Shirts", "defaultActive": false },
+    { "name": "POLO SHIRTS", "label": "Polo Shirts", "defaultActive": false },
+    { "name": "UNIFORM", "label": "Uniform", "defaultActive": false },
+    { "name": "SHORTS", "label": "Shorts", "defaultActive": false },
+    { "name": "JACKETS", "label": "Jackets", "defaultActive": false }
+  ],
+  "collections": [
+    {
+      "id": "workshirts",
+      "title": "WORKSHIRTS",
+      "subtitle": "Formal Campus Wear",
+      "image": "1.png",
+      "link": "/products"
+    },
+    {
+      "id": "himpunan-jackets",
+      "title": "HIMPUNAN JACKETS",
+      "subtitle": "Faculty Pride Collection",
+      "image": "2.png",
+      "link": "/products"
+    },
+    {
+      "id": "casual-tees",
+      "title": "CASUAL T-SHIRTS",
+      "subtitle": "Everyday Essentials",
+      "image": "3.png",
+      "link": "/products"
+    }
+  ]
+}
