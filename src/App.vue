@@ -18,7 +18,6 @@ onMounted(() => {
   <div class="wrapper">
     <nav>
       <RouterLink to="/"></RouterLink>
-      <!-- <RouterLink to="/contact">Contact</RouterLink> -->
     </nav>
   </div>
 
