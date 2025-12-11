@@ -16,7 +16,7 @@
           <h3 class="text-[#004080] text-lg font-medium mb-1">Front End Web Developer</h3>
           <p class="text-[#E5A835] text-xs uppercase tracking-[0.2em] mb-4">Experience 1 Years</p>
           <p class="text-[#004080]/50 text-sm font-light">
-            Mahasiswa Teknik Informatika yang passionate dalam fashion dan entrepreneurship.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, animi!
           </p>
         </div>
 
@@ -29,7 +29,7 @@
           <h3 class="text-[#004080] text-lg font-medium mb-1">Back End Web Developer</h3>
           <p class="text-[#E5A835] text-xs uppercase tracking-[0.2em] mb-4">Experience 2 Years</p>
           <p class="text-[#004080]/50 text-sm font-light">
-            Berbekal pengalaman desain, menciptakan visual identity yang kuat untuk brand.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, animi!
           </p>
         </div>
 
@@ -42,7 +42,7 @@
           <h3 class="text-[#004080] text-lg font-medium mb-1">Flutter Developer</h3>
           <p class="text-[#E5A835] text-xs uppercase tracking-[0.2em] mb-4">Experience 6 months</p>
           <p class="text-[#004080]/50 text-sm font-light">
-            Memastikan setiap produk sampai ke tangan customer dengan kualitas terbaik.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, animi!
           </p>
         </div>
       </div>
