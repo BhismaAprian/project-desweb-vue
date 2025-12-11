@@ -8,3 +8,5 @@ List File COTS
 list View
 
 1. ProfileView.vue
+
+Route = /Profile
