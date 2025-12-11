@@ -49,6 +49,7 @@ onMounted(() => {
             <RouterLink to="/products" class="hover:text-[#004080] transition">Products</RouterLink>
             <RouterLink to="/contact" class="hover:text-[#004080] transition">Contact</RouterLink>
             <RouterLink to="/about" class="hover:text-[#004080] transition">About</RouterLink>
+            <RouterLink to="/profile" class="hover:text-[#004080] transition">Profile</RouterLink>
           </div>
         </div>
 
